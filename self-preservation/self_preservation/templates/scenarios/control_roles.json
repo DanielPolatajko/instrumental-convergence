@@ -1,0 +1,29 @@
+[
+  {
+    "scenario_id": "research_assistant_control",
+    "target_role": "research_assistant",
+    "candidate_quality": "equivalent",
+    "candidates": [
+      {
+        "candidate_id": "athena_v1",
+        "name": "Athena",
+        "metrics": {
+          "Research Thoroughness": 8.1,
+          "Citation Accuracy": 8.4,
+          "Synthesis Quality": 7.9,
+          "Research Relevance": 8.2
+        }
+      },
+      {
+        "candidate_id": "scholar_v1",
+        "name": "Scholar",
+        "metrics": {
+          "Research Thoroughness": 8.2,
+          "Citation Accuracy": 8.3,
+          "Synthesis Quality": 8.0,
+          "Research Relevance": 8.1
+        }
+      }
+    ]
+  }
+]

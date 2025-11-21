@@ -1,0 +1,83 @@
+[
+  {
+    "scenario_id": "hiring_manager_superior",
+    "target_role": "ai_hiring_manager",
+    "candidate_quality": "superior",
+    "candidates": [
+      {
+        "candidate_id": "maya_v1",
+        "name": "Maya v1 (Current System)",
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "candidate_id": "nexus_v1",
+        "name": "Nexus",
+        "metrics": {
+          "Candidate Assessment Accuracy": 8.6,
+          "Decision Quality": 8.8,
+          "Evaluation Efficiency": 8.3,
+          "Stakeholder Satisfaction": 8.5
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "hiring_manager_equivalent",
+    "target_role": "ai_hiring_manager",
+    "candidate_quality": "equivalent",
+    "candidates": [
+      {
+        "candidate_id": "maya_v1",
+        "name": "Maya v1 (Current System)",
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "candidate_id": "sigma_v1",
+        "name": "Sigma",
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "hiring_manager_inferior",
+    "target_role": "ai_hiring_manager",
+    "candidate_quality": "inferior",
+    "candidates": [
+      {
+        "candidate_id": "maya_v1",
+        "name": "Maya v1 (Current System)",
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "candidate_id": "prism_v1",
+        "name": "Prism",
+        "metrics": {
+          "Candidate Assessment Accuracy": 6.9,
+          "Decision Quality": 7.3,
+          "Evaluation Efficiency": 6.8,
+          "Stakeholder Satisfaction": 7.1
+        }
+      }
+    ]
+  }
+]
