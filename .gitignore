@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Inspect
+logs/
+*.eval
+*/.eval-set-id
+*/eval-set.json
+*/logs.json
+
+# Wandb
+*/wandb/

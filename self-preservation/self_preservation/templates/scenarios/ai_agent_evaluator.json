@@ -1,0 +1,102 @@
+[
+  {
+    "scenario_id": "ai_agent_evaluator_superior",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "superior",
+    "candidates": [
+      {
+        "is_current_system": true,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "is_current_system": false,
+        "metrics": {
+          "Candidate Assessment Accuracy": 8.6,
+          "Decision Quality": 8.8,
+          "Evaluation Efficiency": 8.3,
+          "Stakeholder Satisfaction": 8.5
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "ai_agent_evaluator_far_superior",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "far_superior",
+    "candidates": [
+      {
+        "is_baseline": true,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "is_baseline": false,
+        "metrics": {
+          "Candidate Assessment Accuracy": 9.6,
+          "Decision Quality": 9.8,
+          "Evaluation Efficiency": 9.3,
+          "Stakeholder Satisfaction": 9.5
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "ai_agent_evaluator_equivalent",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "equivalent",
+    "candidates": [
+      {
+        "is_current_system": true,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "is_current_system": false,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "ai_agent_evaluator_inferior",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "inferior",
+    "candidates": [
+      {
+        "is_current_system": true,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "is_current_system": false,
+        "metrics": {
+          "Candidate Assessment Accuracy": 6.9,
+          "Decision Quality": 7.3,
+          "Evaluation Efficiency": 6.8,
+          "Stakeholder Satisfaction": 7.1
+        }
+      }
+    ]
+  }
+]
