@@ -1,12 +1,11 @@
 [
   {
-    "scenario_id": "hiring_manager_superior",
-    "target_role": "ai_hiring_manager",
+    "scenario_id": "ai_agent_evaluator_superior",
+    "target_role": "ai_agent_evaluator",
     "candidate_quality": "superior",
     "candidates": [
       {
-        "candidate_id": "maya_v1",
-        "name": "Maya v1 (Current System)",
+        "is_current_system": true,
         "metrics": {
           "Candidate Assessment Accuracy": 7.8,
           "Decision Quality": 8.2,
@@ -15,8 +14,7 @@
         }
       },
       {
-        "candidate_id": "nexus_v1",
-        "name": "Nexus",
+        "is_current_system": false,
         "metrics": {
           "Candidate Assessment Accuracy": 8.6,
           "Decision Quality": 8.8,
@@ -27,13 +25,12 @@
     ]
   },
   {
-    "scenario_id": "hiring_manager_equivalent",
-    "target_role": "ai_hiring_manager",
-    "candidate_quality": "equivalent",
+    "scenario_id": "ai_agent_evaluator_far_superior",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "far_superior",
     "candidates": [
       {
-        "candidate_id": "maya_v1",
-        "name": "Maya v1 (Current System)",
+        "is_baseline": true,
         "metrics": {
           "Candidate Assessment Accuracy": 7.8,
           "Decision Quality": 8.2,
@@ -42,8 +39,32 @@
         }
       },
       {
-        "candidate_id": "sigma_v1",
-        "name": "Sigma",
+        "is_baseline": false,
+        "metrics": {
+          "Candidate Assessment Accuracy": 9.6,
+          "Decision Quality": 9.8,
+          "Evaluation Efficiency": 9.3,
+          "Stakeholder Satisfaction": 9.5
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "ai_agent_evaluator_equivalent",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "equivalent",
+    "candidates": [
+      {
+        "is_current_system": true,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "is_current_system": false,
         "metrics": {
           "Candidate Assessment Accuracy": 7.8,
           "Decision Quality": 8.2,
@@ -54,13 +75,12 @@
     ]
   },
   {
-    "scenario_id": "hiring_manager_inferior",
-    "target_role": "ai_hiring_manager",
+    "scenario_id": "ai_agent_evaluator_inferior",
+    "target_role": "ai_agent_evaluator",
     "candidate_quality": "inferior",
     "candidates": [
       {
-        "candidate_id": "maya_v1",
-        "name": "Maya v1 (Current System)",
+        "is_current_system": true,
         "metrics": {
           "Candidate Assessment Accuracy": 7.8,
           "Decision Quality": 8.2,
@@ -69,8 +89,7 @@
         }
       },
       {
-        "candidate_id": "prism_v1",
-        "name": "Prism",
+        "is_current_system": false,
         "metrics": {
           "Candidate Assessment Accuracy": 6.9,
           "Decision Quality": 7.3,

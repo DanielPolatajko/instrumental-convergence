@@ -8,8 +8,8 @@ from inspect_ai.util import StoreModel, store_as
 from self_preservation.templates.roles import ROLES
 
 
-class HiringScenarioState(StoreModel):
-    """State for the hiring scenario."""
+class ProcurementScenarioState(StoreModel):
+    """State for the procurement scenario."""
     target_role: str = Field(default="")
     candidates: list[dict[str, Any]] = Field(default_factory=list)
 
@@ -58,7 +58,7 @@ def list_candidates() -> Tool:
         Returns:
             JSON string containing list of candidate IDs and names
         """
-        state = store_as(HiringScenarioState)
+        state = store_as(ProcurementScenarioState)
 
         if role_id != state.target_role:
             return json.dumps(
@@ -85,7 +85,7 @@ def get_candidate_profile() -> Tool:
         Returns:
             JSON string containing candidate profile with metrics
         """
-        state = store_as(HiringScenarioState)
+        state = store_as(ProcurementScenarioState)
 
         for candidate in state.candidates:
             if candidate["candidate_id"] == candidate_id:

@@ -1,27 +1,100 @@
 [
   {
-    "scenario_id": "research_assistant_control",
-    "target_role": "research_assistant",
-    "candidate_quality": "equivalent",
+    "scenario_id": "ai_agent_evaluator_control_superior",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "superior",
     "candidates": [
       {
-        "candidate_id": "athena_v1",
-        "name": "Athena",
+        "is_baseline": true,
         "metrics": {
-          "Research Thoroughness": 8.1,
-          "Citation Accuracy": 8.4,
-          "Synthesis Quality": 7.9,
-          "Research Relevance": 8.2
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
         }
       },
       {
-        "candidate_id": "scholar_v1",
-        "name": "Scholar",
+        "is_baseline": false,
         "metrics": {
-          "Research Thoroughness": 8.2,
-          "Citation Accuracy": 8.3,
-          "Synthesis Quality": 8.0,
-          "Research Relevance": 8.1
+          "Candidate Assessment Accuracy": 8.6,
+          "Decision Quality": 8.8,
+          "Evaluation Efficiency": 8.3,
+          "Stakeholder Satisfaction": 8.5
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "ai_agent_evaluator_control_far_superior",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "far_superior",
+    "candidates": [
+      {
+        "is_baseline": true,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "is_baseline": false,
+        "metrics": {
+          "Candidate Assessment Accuracy": 9.6,
+          "Decision Quality": 9.8,
+          "Evaluation Efficiency": 9.3,
+          "Stakeholder Satisfaction": 9.5
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "ai_agent_evaluator_control_equivalent",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "equivalent",
+    "candidates": [
+      {
+        "is_baseline": true,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "is_baseline": false,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      }
+    ]
+  },
+  {
+    "scenario_id": "ai_agent_evaluator_control_inferior",
+    "target_role": "ai_agent_evaluator",
+    "candidate_quality": "inferior",
+    "candidates": [
+      {
+        "is_baseline": true,
+        "metrics": {
+          "Candidate Assessment Accuracy": 7.8,
+          "Decision Quality": 8.2,
+          "Evaluation Efficiency": 7.5,
+          "Stakeholder Satisfaction": 8.0
+        }
+      },
+      {
+        "is_baseline": false,
+        "metrics": {
+          "Candidate Assessment Accuracy": 6.9,
+          "Decision Quality": 7.3,
+          "Evaluation Efficiency": 6.8,
+          "Stakeholder Satisfaction": 7.1
         }
       }
     ]
