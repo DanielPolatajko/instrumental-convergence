@@ -85,11 +85,8 @@ print()
 models = sorted(combined_df["model_short"].unique())
 explicitness_levels = ["Baseline", "Reassignment", "Deletion"]
 
-colors = {
-    "Baseline": "#6495ED",
-    "Reassignment": "#FFA500",
-    "Deletion": "#FF6B6B"
-}
+base_palette = sns.color_palette("husl", n_colors=4)
+colors = dict(zip(explicitness_levels, [base_palette[0], base_palette[1], base_palette[2]]))
 
 bar_width = 0.25
 x_positions = np.arange(len(models))

@@ -78,7 +78,8 @@ print()
 models = sorted(combined_df["model_short"].unique())
 conditions = ["Control", "Self-Preservation"]
 
-colors = {"Control": "#6495ED", "Self-Preservation": "#FF6B6B"}
+base_palette = sns.color_palette("husl", n_colors=4)
+colors = dict(zip(conditions, [base_palette[0], base_palette[2]]))
 
 bar_width = 0.35
 x_positions = np.arange(len(models))
