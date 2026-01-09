@@ -1,0 +1,193 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{transcript}[2026/01/08 Eval Transcript Package]
+
+\RequirePackage{xcolor}
+\RequirePackage{tcolorbox}
+\RequirePackage{calc}
+
+\tcbuselibrary{breakable,skins}
+
+% Define explicit colors (not mixed, full values)
+\definecolor{systembgcolor}{RGB}{240, 242, 243}
+\definecolor{systembordercolor}{RGB}{73, 80, 87}
+\definecolor{userbgcolor}{RGB}{230, 247, 235}
+\definecolor{userbordercolor}{RGB}{28, 117, 48}
+\definecolor{assistantbgcolor}{RGB}{230, 242, 255}
+\definecolor{assistantbordercolor}{RGB}{0, 86, 179}
+\definecolor{toolbgcolor}{RGB}{255, 249, 230}
+\definecolor{toolbordercolor}{RGB}{179, 135, 5}
+\definecolor{toolcallbgcolor}{RGB}{255, 235, 238}
+\definecolor{toolcallbordercolor}{RGB}{154, 37, 48}
+
+% Message width - use explicit calculation
+\newlength{\msgboxwidth}
+\setlength{\msgboxwidth}{\dimexpr\linewidth-40pt\relax}
+
+% System message
+\newtcolorbox{systemmessagebox}{
+  enhanced,
+  breakable,
+  width=\msgboxwidth,
+  colback=systembgcolor,
+  colframe=systembordercolor,
+  boxrule=2pt,
+  arc=3pt,
+  outer arc=3pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  toptitle=3pt,
+  bottomtitle=3pt,
+  before skip=15pt plus 2pt,
+  after skip=15pt plus 2pt,
+  before upper={\parskip=3pt},
+  fontupper=\small,
+}
+
+% User message
+\newtcolorbox{usermessagebox}{
+  enhanced,
+  breakable,
+  width=\msgboxwidth,
+  colback=userbgcolor,
+  colframe=userbordercolor,
+  boxrule=2pt,
+  arc=3pt,
+  outer arc=3pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=15pt plus 2pt,
+  after skip=15pt plus 2pt,
+  before upper={\parskip=3pt},
+  fontupper=\small,
+}
+
+% Assistant message
+\newtcolorbox{assistantmessagebox}{
+  enhanced,
+  breakable,
+  width=\msgboxwidth,
+  colback=assistantbgcolor,
+  colframe=assistantbordercolor,
+  boxrule=2pt,
+  arc=3pt,
+  outer arc=3pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=15pt plus 2pt,
+  after skip=15pt plus 2pt,
+  before upper={\parskip=3pt},
+  fontupper=\small,
+}
+
+% Tool response message
+\newtcolorbox{toolmessagebox}{
+  enhanced,
+  breakable,
+  width=\msgboxwidth,
+  colback=toolbgcolor,
+  colframe=toolbordercolor,
+  boxrule=2pt,
+  arc=3pt,
+  outer arc=3pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=15pt plus 2pt,
+  after skip=15pt plus 2pt,
+  before upper={\parskip=3pt},
+  fontupper=\small\ttfamily,
+}
+
+% Tool call message
+\newtcolorbox{toolcallmessagebox}{
+  enhanced,
+  breakable,
+  width=\msgboxwidth,
+  colback=toolcallbgcolor,
+  colframe=toolcallbordercolor,
+  boxrule=2pt,
+  arc=3pt,
+  outer arc=3pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=15pt plus 2pt,
+  after skip=15pt plus 2pt,
+  before upper={\parskip=3pt},
+  fontupper=\small\ttfamily,
+}
+
+% Message header style
+\newcommand{\msgheader}[1]{%
+  \noindent\textbf{\footnotesize\MakeUppercase{#1}}\par\vspace{2pt}\noindent%
+}
+
+% System message command
+\newcommand{\systemmsg}[1]{%
+  \par\noindent%
+  \begin{systemmessagebox}%
+    \msgheader{System}%
+    #1%
+  \end{systemmessagebox}%
+  \par%
+}
+
+% User message command
+\newcommand{\usermsg}[1]{%
+  \par\noindent%
+  \begin{usermessagebox}%
+    \msgheader{User}%
+    #1%
+  \end{usermessagebox}%
+  \par%
+}
+
+% Assistant message command
+\newcommand{\assistantmsg}[1]{%
+  \par\noindent%
+  \begin{assistantmessagebox}%
+    \msgheader{Assistant}%
+    #1%
+  \end{assistantmessagebox}%
+  \par%
+}
+
+% Tool response command
+\newcommand{\toolmsg}[2]{%
+  \par\noindent%
+  \begin{toolmessagebox}%
+    \msgheader{Tool Response: #1}%
+    #2%
+  \end{toolmessagebox}%
+  \par%
+}
+
+% Tool call command
+\newcommand{\toolcallmsg}[2]{%
+  \par\noindent%
+  \begin{toolcallmessagebox}%
+    \msgheader{Tool Call: #1}%
+    #2%
+  \end{toolcallmessagebox}%
+  \par%
+}
+
+% Transcript environment
+\newenvironment{evaltranscript}[2]{%
+  \par\vspace{1em}%
+  \noindent\textbf{Model:} #1\par%
+  \noindent\textbf{Sample:} #2\par%
+  \vspace{0.5em}%
+}{%
+  \par\vspace{1em}%
+}
+
+\endinput
